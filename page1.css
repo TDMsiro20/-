@@ -1,0 +1,128 @@
+.container {
+    max-width: 960px;
+    margin: -8px auto;
+}
+
+/* Header */
+#header {
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: cornflowerblue;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#logo {
+    padding: 5px 0px;
+}
+
+#logo img {
+    max-width: 50px;
+    height: auto;
+}
+
+#main-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-menu li{
+    position: relative;
+}
+
+#main-menu li a {
+    color: black;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+
+#main-menu ul.sub-menu {
+    position: absolute;
+    background-color: cornflowerblue;
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    display: none;
+    z-index: 1;
+}
+
+#main-menu li:hover>ul.sub-menu{
+    display: block;
+}
+
+#main-menu ul.sub-menu a {
+    padding: 8px 15px;
+    border-bottom: 1px solid rgb(44, 35, 35);
+    left: 0;
+}
+
+#main-menu ul.sub-menu li:hover a {
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+#main-menu ul.sub-menu li:last-child a {
+    border: none;
+}
+
+#main-menu>li>a {
+    position: relative;
+}
+
+#main-menu>li>a::before {
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: black;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#main-menu>li:hover>a::before {
+    display: block;
+    width: 100%;
+}
+
+.warp-main-nav {
+    margin: 0px auto;
+    border-bottom: 1px solid black;
+}
+
+.main-nav .parent {
+    justify-content: center;
+    position: relative;
+}
+
+.parent {
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    left: 100px;
+}
+
+.parent li{
+    position: relative;
+    top: 4px;
+}
+
+.parent li a {
+    color: black;
+    display: block;
+    padding: 5px 5px;
+    text-decoration: none;
+}
+
+.parent li a:hover {
+    color: red;
+}
